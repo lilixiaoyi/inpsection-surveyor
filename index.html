@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ela Admin - HTML5 Admin Template</title>
+    <title>验货员后台</title>
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -84,25 +84,25 @@
     <aside id="left-panel" class="left-panel">
             <nav class="navbar navbar-expand-sm navbar-default">
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav" id='nky'>
                         <li name = 'mymain'class='active'>
                             <a href="index-content.html" target="myiframe"><i class="menu-icon fa fa-laptop"></i>我的主页</a>
                         </li>
                         <li>
                             <a href="check.html" target="myiframe"> <i class="menu-icon fa fa-bolt"></i>我要抢单</a>
                         </li>
-                        <li  class="menu-item-has-children dropdown active">
+                        <li  class="menu-item-has-children dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false"> <i class="menu-icon fa fa-file-text-o"></i>我的订单</a>
                             <ul class="sub-menu children dropdown-menu">
-                                <li><a href="orders-examining.html">待审核</a></li>
-                                <li><a href="orders-refused.html">审核拒绝</a></li>
+                                <li><a href="orders-examining.html" target="myiframe">待审核</a></li>
+                                <li><a href="orders-refused.html" target="myiframe">审核拒绝</a></li>
     
-                                <li><a href="orders-check.html">待验货</a></li>
-                                <li><a href="orders-checking.html">验货中</a></li>
+                                <li><a href="orders-check.html" target="myiframe">待验货</a></li>
+                                <li><a href="orders-checking.html" target="myiframe">验货中</a></li>
     
-                                <li><a href="orders-finished.html">已完成</a></li>
-                                <li><a href="orders-cancel.html">已取消</a></li>
+                                <li><a href="orders-finished.html" target="myiframe">已完成</a></li>
+                                <li><a href="orders-cancel.html" target="myiframe">已取消</a></li>
     
     
                             </ul>
@@ -111,32 +111,32 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false"> <i class="menu-icon fa fa-file-text"></i>我的报告</a>
                             <ul class="sub-menu children dropdown-menu">
-                                <li><a href="reports-unfinished.html">未完成</a></li>
-                                <li><a href="reports-finished.html">已完成</a></li>
-                                <li><a href="reports-examining.html">待审核</a></li>
+                                <li><a href="reports-unfinished.html" target="myiframe">未完成</a></li>
+                                <li><a href="reports-finished.html" target="myiframe">已完成</a></li>
+                                <li><a href="reports-examining.html" target="myiframe">待审核</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="complaint.html"><i class="menu-icon fa fa-edit"></i>我的评价</a>
+                            <a href="complaint.html" target="myiframe"><i class="menu-icon fa fa-edit"></i>我的评价</a>
                         </li>
     
                         <li class="menu-item-has-children dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false"> <i class="menu-icon fa fa-user"></i>我的账户</a>
                             <ul class="sub-menu children dropdown-menu">
-                                <li><a href="wallet.html">我的钱包</a></li>
-                                <li><a href="integral.html">我的积分</a></li>
-                                <li><a href="personal.html">账户设置</a></li>
+                                <li><a href="wallet.html" target="myiframe">我的钱包</a></li>
+                                <li><a href="integral.html" target="myiframe">我的积分</a></li>
+                                <li><a href="personal.html" target="myiframe">账户设置</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="mynews.html"> <i class="menu-icon fa fa-bell"></i>我的消息 </a>
+                            <a href="mynews.html" target="myiframe"> <i class="menu-icon fa fa-bell"></i>我的消息 </a>
                         </li>
                         <li>
-                            <a href="#"> <i class="menu-icon fa fa-mail-forward"></i>业务推荐 </a>
+                            <a href="#" target="myiframe"> <i class="menu-icon fa fa-mail-forward"></i>业务推荐 </a>
                         </li>
                         <li>
-                            <a href="partner.html"> <i class="menu-icon fa fa-group"></i>我的伙伴</a>
+                            <a href="partner.html" target="myiframe"> <i class="menu-icon fa fa-group"></i>我的伙伴</a>
                         </li>
     
     
@@ -173,7 +173,7 @@
                         </div>
 
                         <div class="dropdown for-notification">
-                            <a href="mynews.html">
+                            <a href="mynews.html" target="myiframe">
                                 <i class="fa fa-bell"></i>
                             </a>
 
@@ -187,7 +187,7 @@
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="personal.html"><i class="fa fa- user"></i>账户设置</a>
+                            <a class="nav-link" href="personal.html" target="myiframe"><i class="fa fa- user"></i>账户设置</a>
 
                             <a class="nav-link" href="#"><i class="fa fa- user"></i>安全退出</a>
 
@@ -346,7 +346,7 @@
                             showGrid: true
                         }
                     });
-
+ 
                 chart.on('draw', function (data) {
                     if (data.type === 'line' || data.type === 'area') {
                         data.element.animate({
@@ -427,6 +427,32 @@
             // Bar Chart #flotBarChart End
         });
     </script>
+    <script>
+          //一级激活
+            function hasClass(elements, cName) {
+                return !!elements.className.match(new RegExp("(\\s|^)" + cName + "(\\s|$)"));
+            };
+            function addClass(elements, cName) {
+                if (!hasClass(elements, cName)) {
+                    elements.className += " " + cName;
+                };
+            };
+            function removeClass(elements, cName) {
+                if (hasClass(elements, cName)) {
+                    elements.className = elements.className.replace(new RegExp("(\\s|^)" + cName + "(\\s|$)"), " ");
+                };
+            };
+            var li = document.querySelectorAll('#nky li');
+    
+  
+            for (var i = 0; i < li.length; i++)
+                li[i].onclick = function () {
+                 //   for (var i = 0; i < li.length; i++) li[i].className = '';
+                  //  this.className = 'active'
+                     for (var i = 0; i < li.length; i++)  removeClass(li[i],'active');
+                   addClass(this,'active')
+                }
+        </script>
 </body>
 
 </html>
